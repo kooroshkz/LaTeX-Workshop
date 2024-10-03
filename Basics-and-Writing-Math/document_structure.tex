@@ -1,0 +1,205 @@
+\documentclass{report}
+\usepackage{geometry}    % For page layout
+\usepackage{fancyhdr}    % Custom headers and footers
+\usepackage{hyperref}    % For hyperlinks and PDF navigation
+\usepackage{lipsum}      % For placeholder text
+\usepackage{graphicx}    % For images in title page
+\usepackage[toc]{appendix} % For appendices
+\usepackage{makeidx}     % For creating an index
+
+\geometry{a4paper, margin=1in}
+
+% Title Page
+\title{LaTeX Workshop: Document Structure}
+\author{
+    \begin{tabular}{c c c}
+        Dalia Kamal Zadeh & \hspace{2cm} & Koorosh Komeili Zadeh \\
+        Student Mentor & & Student Mentor \\
+        Universiteit Leiden & & Universiteit Leiden
+    \end{tabular}
+}
+\date{}
+\makeindex % Create an index in the document
+
+\begin{document}
+\maketitle
+
+% Adding Table of Contents
+\tableofcontents
+\newpage
+
+\section*{Introduction to Document Structure}
+
+LaTeX allows you to create complex documents with chapters, sections, and custom layouts. Here's how to make the most out of LaTeX's structure options.
+
+\section{Basic Article Structure}
+The most basic LaTeX document looks like this:
+\begin{verbatim}
+\documentclass{article}
+\begin{document}
+    \section{Introduction}
+    Your content goes here...
+\end{document}
+\end{verbatim}
+
+\section{Multi-chapter Reports}
+For larger documents like reports or theses, use the \texttt{report} class and add chapters.
+
+\textbf{Code:}
+\begin{verbatim}
+\documentclass{report}
+\begin{document}
+    \chapter{Introduction}
+    \section{Background}
+\end{document}
+\end{verbatim}
+
+\textbf{Output:}
+- \textbf{Chapter 1}: Introduction
+  - \textbf{Section 1.1}: Background
+
+---
+
+\section{Customizing Page Layout}
+You can customize margins, paper size, and layout using the \texttt{geometry} package.
+
+\begin{verbatim}
+\usepackage[a4paper, margin=1in]{geometry}
+\end{verbatim}
+
+---
+
+\section{Custom Headers and Footers (Using \texttt{fancyhdr})}
+LaTeX makes it easy to customize headers and footers with the \texttt{fancyhdr} package.
+
+\textbf{Code:}
+\begin{verbatim}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{LaTeX Workshop}
+\fancyfoot[C]{Page \thepage}
+\end{verbatim}
+
+---
+
+\section{Table of Contents}
+To automatically generate a table of contents based on your chapters and sections, use the \texttt{\textbackslash tableofcontents} command:
+\begin{verbatim}
+\tableofcontents
+\end{verbatim}
+This will create a list of all chapters, sections, and subsections in your document.
+
+---
+
+\section{Cross-Referencing Sections and Figures}
+You can reference sections, figures, and tables using the \texttt{label} and \texttt{ref} commands. This will automatically update numbers when they change.
+
+\textbf{Code:}
+\begin{verbatim}
+\section{Introduction} \label{sec:intro}
+In Section \ref{sec:intro}, we introduce the concept of...
+
+\begin{figure}[h]
+    \includegraphics{image.png}
+    \caption{Sample Figure}
+    \label{fig:sample}
+\end{figure}
+
+Refer to Figure \ref{fig:sample} for an example.
+\end{verbatim}
+
+---
+
+\section{Appendices}
+You can include appendices for additional material at the end of your document using the \texttt{appendix} package.
+
+\textbf{Code:}
+\begin{verbatim}
+\begin{appendices}
+    \chapter{Additional Figures}
+    More details here...
+
+    \chapter{Raw Data}
+    Include raw data...
+\end{appendices}
+\end{verbatim}
+
+---
+
+\section{Customizing the Title Page}
+You can customize the title page by adding logos, more detailed information, and adjusting formatting.
+
+\textbf{Code:}
+\begin{verbatim}
+\title{
+    \includegraphics[width=0.3\textwidth]{university-logo.png} \\[1cm]
+    \textbf{LaTeX Workshop: Document Structure} \\
+    \vspace{0.5cm}
+    \large Universiteit Leiden
+}
+\author{
+    \textbf{Dalia Kamal Zadeh and Koorosh Komeili Zadeh} \\
+    Student Mentors
+}
+\date{}
+\end{verbatim}
+
+This will add a university logo at the top of the title page and adjust the author and title styling.
+
+---
+
+\section{Creating an Index}
+To create an index, use the \texttt{makeidx} package and the \texttt{\textbackslash index} command to mark terms in the text. LaTeX will then automatically generate an index based on those terms.
+
+\textbf{Code:}
+\begin{verbatim}
+\usepackage{makeidx}
+\makeindex
+
+% In the document, use \index to add terms to the index
+Here we introduce \texttt{LaTeX} \index{LaTeX}, a typesetting system.
+
+% At the end of the document, generate the index
+\printindex
+\end{verbatim}
+
+---
+
+\section{Adding Hyperlinks and PDF Bookmarks}
+To enable clickable links and navigation in your PDF, use the \texttt{hyperref} package. This makes section links clickable in the table of contents and creates a more interactive PDF.
+
+\textbf{Code:}
+\begin{verbatim}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={LaTeX Workshop},
+    bookmarks=true
+}
+\end{verbatim}
+
+This will color the links in your PDF and enable bookmarks in the PDF viewer.
+
+---
+
+\chapter{Conclusion}
+In this guide, we explored:
+\begin{itemize}
+    \item The basic structure of a LaTeX document, including articles and reports.
+    \item Custom page layouts, headers, and footers.
+    \item Advanced features such as table of contents, cross-referencing, and appendices.
+    \item Creating a custom title page and index.
+    \item Adding hyperlinks and bookmarks to make your PDFs more interactive.
+\end{itemize}
+
+With these techniques, you can create highly structured, professional LaTeX documents for any purpose.
+
+\newpage
+% Print the index at the end of the document
+\printindex
+
+\end{document}

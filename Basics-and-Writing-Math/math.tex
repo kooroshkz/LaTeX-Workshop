@@ -1,0 +1,243 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools} % Enhanced math capabilities
+\usepackage{bm}        % For bold math symbols
+
+% Title Page
+\title{LaTeX Workshop: Writing Math in LaTeX}
+\author{
+    \begin{tabular}{c c c}
+        Dalia Kamal Zadeh & \hspace{2cm} & Koorosh Komeili Zadeh \\
+        Student Mentor & & Student Mentor \\
+        Universiteit Leiden & & Universiteit Leiden
+    \end{tabular}
+}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Writing Math in LaTeX}
+
+LaTeX is ideal for writing complex math equations, symbols, and formulas. Let's explore some advanced features and techniques.
+
+---
+
+\subsection*{1. Aligning Equations}
+
+The \texttt{align} environment helps align multi-line equations:
+
+\begin{align}
+    x^2 + y^2 &= z^2 \\
+    E &= mc^2 \\
+    a + b &= c + d
+\end{align}
+
+You can also suppress numbering on specific lines using \texttt{\\nonumber}:
+
+\begin{align}
+    x^2 + y^2 &= z^2 \nonumber \\
+    a + b &= c + d
+\end{align}
+
+---
+
+\subsection*{2. Advanced Math Symbols with \texttt{amssymb}}
+
+The \texttt{amssymb} package provides access to various advanced math symbols:
+
+\[
+\therefore, \because, \infty, \sum_{i=1}^{n}i, \Rightarrow, \implies
+\]
+
+You can also write set theory symbols like:
+
+\[
+A \cup B, \quad A \cap B, \quad \mathbb{R}, \quad \mathbb{N}
+\]
+
+---
+
+\subsection*{3. Matrices and Vectors}
+
+LaTeX can handle matrices and vectors using the \texttt{bmatrix} or \texttt{pmatrix} environments. Here's an example of a 2x2 matrix:
+
+\[
+\begin{bmatrix}
+    a & b \\
+    c & d
+\end{bmatrix}
+\]
+
+And a vector:
+
+\[
+\mathbf{v} = \begin{pmatrix}
+    v_1 \\
+    v_2 \\
+    v_3
+\end{pmatrix}
+\]
+
+You can use other delimiters like parentheses or vertical lines for determinants:
+
+\[
+\det(A) = \begin{vmatrix}
+    a & b \\
+    c & d
+\end{vmatrix}
+\]
+
+---
+
+\subsection*{4. Derivatives and Integrals}
+
+To write derivatives, integrals, and partial derivatives, you can use the following syntax:
+
+\textbf{Derivatives:}
+\[
+\frac{dy}{dx}, \quad \frac{d^2y}{dx^2}
+\]
+
+\textbf{Partial Derivatives:}
+\[
+\frac{\partial y}{\partial x}, \quad \frac{\partial^2 y}{\partial x^2}
+\]
+
+\textbf{Integrals:}
+\[
+\int_0^1 x^2 \, dx, \quad \int_{-\infty}^{\infty} e^{-x^2} \, dx
+\]
+
+\textbf{Multiple Integrals:}
+\[
+\int\!\!\!\int_D f(x,y) \, dx \, dy
+\]
+
+---
+
+\subsection*{5. Limits and Summations}
+
+Limits and summations are easy to write in LaTeX:
+
+\textbf{Limits:}
+\[
+\lim_{x \to 0} \frac{1}{x}, \quad \lim_{n \to \infty} a_n
+\]
+
+\textbf{Summation:}
+\[
+\sum_{n=1}^{\infty} \frac{1}{n^2}
+\]
+
+\textbf{Product:}
+\[
+\prod_{i=1}^{n} x_i
+\]
+
+---
+
+\subsection*{6. Piecewise Functions}
+
+Piecewise functions can be written using the \texttt{cases} environment:
+
+\[
+f(x) =
+\begin{cases}
+    x^2 & \text{if } x > 0 \\
+    -x & \text{if } x \leq 0
+\end{cases}
+\]
+
+---
+
+\subsection*{7. Multiline Equations with Numbering}
+
+For equations that span multiple lines and require custom numbering, use the \texttt{align} environment:
+
+\begin{align}
+    f(x) &= x^2 + 2x + 1 \tag{1} \\
+    g(x) &= \sin(x) + \cos(x) \tag{2} \\
+    h(x) &= e^x \tag{3}
+\end{align}
+
+You can also use the \texttt{multline} environment when you want to split a long equation over multiple lines, where the first line is left-aligned and the last line is right-aligned:
+
+\begin{multline}
+    f(x) = x + x^2 + x^3 + \dots + x^n + \\
+    y + y^2 + y^3 + \dots + y^n
+\end{multline}
+
+---
+
+\subsection*{8. Custom Operators}
+
+You can define your own custom operators using the \texttt{DeclareMathOperator} command:
+
+\DeclareMathOperator{\foo}{Foo}
+\[
+\foo(x) = x^2 + 1
+\]
+
+---
+
+\subsection*{9. Bold Math Symbols with \texttt{bm}}
+
+Use the \texttt{bm} package to create bold mathematical symbols, which is especially useful for vectors and matrices:
+
+\[
+\bm{A} \bm{x} = \bm{b}
+\]
+
+You can also bold specific symbols like Greek letters:
+
+\[
+\bm{\alpha}, \quad \bm{\beta}
+\]
+
+---
+
+\subsection*{10. Fractions and Continued Fractions}
+
+You can write fractions and continued fractions easily in LaTeX:
+
+\textbf{Regular Fraction:}
+\[
+\frac{a}{b}
+\]
+
+\textbf{Continued Fraction:}
+\[
+a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{a_3 + \ddots}}}
+\]
+
+---
+
+\subsection*{11. Spacing in Math Mode}
+
+To adjust the spacing between elements in math mode, you can use the following commands:
+
+\[
+a \, b \quad a \; b \quad a \quad b \quad a \qquad b
+\]
+
+- \texttt{\textbackslash,} for thin space.
+- \texttt{\textbackslash;} for medium space.
+- \texttt{\textbackslash quad} for wide space.
+- \texttt{\textbackslash qquad} for extra wide space.
+
+---
+
+\subsection*{12. The \texttt{cases} Environment}
+
+The \texttt{cases} environment can also be used for writing systems of equations:
+
+\[
+\begin{cases}
+    x + y = 10 \\
+    x - y = 5
+\end{cases}
+\]
+
+
+\end{document}

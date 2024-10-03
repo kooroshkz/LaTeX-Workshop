@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}   % For hyperlinks
+\usepackage{listings}   % For code listings
+\usepackage{tcolorbox}  % For colored boxes
+
+% Title Page
+\title{LaTeX Workshop: Useful Packages}
+\author{
+    \begin{tabular}{c c c}
+        Dalia Kamal Zadeh & \hspace{2cm} & Koorosh Komeili Zadeh \\
+        Student Mentor & & Student Mentor \\
+        Universiteit Leiden & & Universiteit Leiden
+    \end{tabular}
+}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Introduction to Useful Packages}
+
+LaTeX packages extend the functionality of your document. Here are some essential packages you can use to enhance your LaTeX skills.
+
+\subsection*{Math with \texttt{amsmath}}
+
+The \texttt{amsmath} package allows you to write aligned and complex math formulas.
+
+\begin{verbatim}
+\begin{align}
+x^2 + y^2 &= z^2 \\
+E &= mc^2
+\end{align}
+\end{verbatim}
+
+---
+
+\subsection*{Hyperlinks with \texttt{hyperref}}
+
+You can easily add clickable hyperlinks in your document using the \texttt{hyperref} package.
+
+\begin{verbatim}
+\href{https://www.overleaf.com}{Visit Overleaf}
+\end{verbatim}
+
+---
+
+\subsection*{Code Listings with \texttt{listings}}
+
+The \texttt{listings} package is perfect for including code in your document.
+
+\begin{verbatim}
+\begin{lstlisting}[language=Python]
+def hello():
+    print("Hello, World!")
+\end{lstlisting}
+\end{verbatim}
+
+---
+
+\subsection*{Colored Boxes with \texttt{tcolorbox}}
+
+Highlight sections of your document with colored boxes.
+
+\begin{tcolorbox}[colback=yellow!10!white, colframe=black]
+This is an important note in a colored box!
+\end{tcolorbox}
+
+\end{document}

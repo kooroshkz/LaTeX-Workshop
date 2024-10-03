@@ -1,0 +1,163 @@
+\documentclass{article}
+\usepackage{booktabs}  % For professional-looking tables
+\usepackage{multirow}  % For multi-row cells
+\usepackage{array}     % Customizing column formats
+\usepackage[table,xcdraw]{xcolor}  % For table coloring
+
+% Title Page
+\title{LaTeX Workshop: Tables}
+\author{
+    \begin{tabular}{c c c}
+        Dalia Kamal Zadeh & \hspace{2cm} & Koorosh Komeili Zadeh \\
+        Student Mentor & & Student Mentor \\
+        Universiteit Leiden & & Universiteit Leiden
+    \end{tabular}
+}
+\date{}
+\begin{document}
+\maketitle
+
+\section*{Introduction to Tables}
+
+In LaTeX, tables can vary from simple structures to complex ones that suit a variety of use cases, including professional reports and academic papers. Let's explore several types.
+
+\subsection*{1. Simple Tables with Borders}
+
+\textbf{Code:}
+\begin{verbatim}
+\begin{tabular}{|c|c|c|}
+    \hline
+    Name & Age & Score \\
+    \hline
+    Alice & 21 & 85 \\
+    Bob & 22 & 90 \\
+    Charlie & 20 & 78 \\
+    \hline
+\end{tabular}
+\end{verbatim}
+
+\textbf{Output:}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Name} & \textbf{Age} & \textbf{Score} \\
+        \hline
+        Alice & 21 & 85 \\
+        Bob & 22 & 90 \\
+        Charlie & 20 & 78 \\
+        \hline
+    \end{tabular}
+    \caption{Simple table with borders}
+\end{table}
+
+---
+
+\subsection*{2. Professional Tables (Using \texttt{booktabs})}
+
+You can create cleaner tables without vertical borders using the \texttt{booktabs} package.
+
+\textbf{Code:}
+\begin{verbatim}
+\begin{tabular}{lcc}
+    \toprule
+    \textbf{Name} & \textbf{Age} & \textbf{Score} \\
+    \midrule
+    Alice & 21 & 85 \\
+    Bob & 22 & 90 \\
+    Charlie & 20 & 78 \\
+    \bottomrule
+\end{tabular}
+\end{verbatim}
+
+\textbf{Output:}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{lcc}
+        \toprule
+        \textbf{Name} & \textbf{Age} & \textbf{Score} \\
+        \midrule
+        Alice   & 21  & 85 \\
+        Bob     & 22  & 90 \\
+        Charlie & 20  & 78 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Professional table using \texttt{booktabs}}
+\end{table}
+
+---
+
+\subsection*{3. Tables with Colors}
+
+You can apply colors to rows or cells to highlight important data using the \texttt{xcolor} package.
+
+\textbf{Code:}
+\begin{verbatim}
+\begin{tabular}{|c|c|c|}
+    \hline
+    \rowcolor{lightgray} \textbf{Name} & \textbf{Age} & \textbf{Score} \\
+    \hline
+    Alice   & 21  & 85 \\
+    \rowcolor{yellow} Bob     & 22  & 90 \\
+    Charlie & 20  & 78 \\
+    \hline
+\end{tabular}
+\end{verbatim}
+
+\textbf{Output:}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \rowcolor{lightgray} \textbf{Name} & \textbf{Age} & \textbf{Score} \\
+        \hline
+        Alice   & 21  & 85 \\
+        \rowcolor{yellow} Bob     & 22  & 90 \\
+        Charlie & 20  & 78 \\
+        \hline
+    \end{tabular}
+    \caption{Table with row colors}
+\end{table}
+
+---
+
+\subsection*{4. Multi-row and Multi-column Tables}
+
+You can merge rows and columns to make complex tables using the \texttt{multirow} package.
+
+\textbf{Code:}
+\begin{verbatim}
+\begin{tabular}{|c|c|c|}
+    \hline
+    \multirow{2}{*}{\textbf{Name}} & \multicolumn{2}{c|}{\textbf{Scores}} \\
+    \cline{2-3}
+    & Test 1 & Test 2 \\
+    \hline
+    Alice & 85 & 90 \\
+    Bob   & 75 & 85 \\
+    \hline
+\end{tabular}
+\end{verbatim}
+
+\textbf{Output:}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \multirow{2}{*}{\textbf{Name}} & \multicolumn{2}{c|}{\textbf{Scores}} \\
+        \cline{2-3}
+                                       & \textbf{Test 1} & \textbf{Test 2} \\
+        \hline
+        Alice   & 85  & 90 \\
+        Bob     & 75  & 85 \\
+        \hline
+    \end{tabular}
+    \caption{Multi-row and multi-column table}
+\end{table}
+
+---
+
+\section*{Final Thoughts on Tables}
+Tables are a powerful tool in LaTeX, offering a wide range of options for presenting data clearly and effectively. By combining different packages and customization options, you can tailor tables to fit your document's needs.
+
+\end{document}

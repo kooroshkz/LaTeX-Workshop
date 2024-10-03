@@ -1,15 +1,18 @@
 \documentclass{article}
 
-% Packages for including figures and tables
 \usepackage{graphicx}
 \usepackage{amsmath}
 
-% Begin the document
 \begin{document}
 
-% Title Page
 \title{LaTeX Workshop: Figures, Tables, and Citations}
-\author{Dalia Kamal Zadeh and Koorosh Komeili Zadeh}
+\author{
+    \begin{tabular}{c c c}
+        Dalia Kamal Zadeh & \hspace{2cm} & Koorosh Komeili Zadeh \\
+        Student Mentor & & Student Mentor \\
+        Universiteit Leiden & & Universiteit Leiden
+    \end{tabular}
+}
 \date{}
 \maketitle
 
@@ -27,7 +30,7 @@ To include a figure in LaTeX, use the \texttt{figure} environment:
 Example usage in the document:
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\textwidth]{Figures/sample-chart} % Replace with your file
+    \includegraphics[width=0.9\textwidth]{Figures/sample-chart}
     \caption{A sample figure}
 \end{figure}
 
@@ -104,6 +107,6 @@ Here are some examples of how you can cite notable works:
 
 % Bibliography section (BibTeX file would be used here)
 \bibliographystyle{plain}
-\bibliography{references}  % references.bib file should be created with entries
+\bibliography{references} 
 
 \end{document}
