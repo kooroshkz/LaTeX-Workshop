@@ -1,0 +1,68 @@
+\documentclass{article}
+
+% Packages for advanced math
+\usepackage{amsmath}
+
+% Begin the document
+\begin{document}
+
+% Title Page
+\title{LaTeX Workshop}
+\author{Dalia Kamal Zadeh and Koorosh Komeili Zadeh}
+\date{}
+\maketitle
+
+\section*{LaTeX Basics}
+
+\subsection*{Document Structure}
+A basic LaTeX document starts with:
+\begin{verbatim}
+\documentclass{article}
+\begin{document}
+\end{document}
+\end{verbatim}
+
+\subsection*{Packages}
+Packages add extra functionality. For example, to use advanced math commands:
+\begin{verbatim}
+\usepackage{amsmath}
+\end{verbatim}
+
+\subsection*{Comments}
+Use the \% symbol to add comments in your LaTeX code:
+\begin{verbatim}
+% This is a comment in LaTeX.
+\end{verbatim}
+
+\newpage
+
+\section*{Writing Math in LaTeX}
+
+\subsection*{Inline Equations}
+An inline equation example: \( a^2 + b^2 = c^2 \).
+
+\subsection*{Displayed Equations}
+Displayed equations are written in their own line, like this:
+\[
+E = mc^2
+\]
+
+\subsection*{Common Math Symbols}
+Some common math symbols in LaTeX:
+\begin{itemize}
+    \item Fractions: \verb|\frac{a}{b}| produces \(\frac{a}{b}\)
+    \item Summation: \verb|\sum| produces \(\sum\)
+    \item Integral: \verb|\int| produces \(\int\)
+    \item Greek Letters: \verb|\alpha| produces \(\alpha\), \verb|\pi| produces \(\pi\)
+\end{itemize}
+
+\subsection*{Examples for Calculus}
+You can write calculus-related expressions using LaTeX:
+\begin{enumerate}
+    \item Derivatives: \(\frac{dy}{dx}\)
+    \item Integrals: \(\int_0^1 x^2 \, dx\)
+    \item Limits: \(\lim_{x \to 0} \frac{1}{x}\)
+\end{enumerate}
+
+% End the document
+\end{document}

@@ -14,8 +14,8 @@ During the workshop, we use [Overleaf](https://www.overleaf.com) as our LaTeX ed
 - `examples/`: Example `.tex` files covering LaTeX basics like document structure, math equations, figures, and tables.
 
 ## How to Sync this Repository with Overleaf
-1. Create a new project on Overleaf.
-2. In Overleaf, go to **Menu** > **GitHub** and connect your GitHub account.
+1. Ensure you had linked your university email with your overleaf account by clicking on `Login in with SSO`.
+2. In Overleaf, go to **Account Setting** connect your GitHub account.
 3. Once connected, you can open this repository in Overleaf directly, or use the sync option to pull changes from GitHub.
 
 ## Topics Covered in the Workshop
