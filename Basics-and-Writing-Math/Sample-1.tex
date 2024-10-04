@@ -10,7 +10,7 @@
 \title{LaTeX Workshop: Basics and Writing Math}
 \author{
     \begin{tabular}{c c c} % Create a table with 3 columns for alignment
-        Dalia Kamal Zadeh & \hspace{2cm} & Koorosh Komeili Zadeh \\
+        Dalia Kamalzadeh & \hspace{2cm} & Koorosh Komeili Zadeh \\
         Student Mentor & & Student Mentor \\
         Universiteit Leiden & & Universiteit Leiden
     \end{tabular}
@@ -28,11 +28,23 @@ A basic LaTeX document starts with:
 \end{document}
 \end{verbatim}
 
+You do not need to do anything with these. However, if:
+
+\begin{itemize}
+    \item If you remove \verb|\documentclass{article}| the document will not compile because LaTeX requires a document class to define the structure and formatting.
+    \item If you remove \verb|\begin{document}| and \verb|\end{document}| the content outside of this environment will not be processed correctly, leading to compilation errors.
+\end{itemize}
+    
+
 \subsection*{Packages}
 Packages add extra functionality. For example, to use advanced math commands:
 \begin{verbatim}
 \usepackage{amsmath}
+\usepackage{graphicx}
 \end{verbatim}
+
+You can also import files from different project onto your new project. This is done using the upload button the top left part of the page, then selecting the file that you want to import. 
+
 
 \subsection*{Comments}
 Use the \% symbol to add comments in your LaTeX code:
@@ -40,7 +52,16 @@ Use the \% symbol to add comments in your LaTeX code:
 % This is a comment in LaTeX.
 \end{verbatim}
 
-\newpage
+\subsection*{Shortcuts}
+Use shortcuts such as:
+\begin{itemize}
+    \item Crtl+B to make a text bold \verb|\textbf{}|
+    \item Crtl+I to make a text italics \verb|\textit{}|
+    \item Crtl+S to recompile and save your file
+\end{itemize}
+
+\newpage % used to start a new page ending the current page at the point placed
+
 
 \section*{Writing Math in LaTeX}
 
