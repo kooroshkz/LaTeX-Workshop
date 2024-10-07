@@ -1,6 +1,6 @@
 # LaTeX-Workshop
 
-This repository contains the slides, materials, and examples for the **LaTeX Workshop** presented by Dalia Kamal Zadeh & Koorosh Komeili Zadeh. The workshop focuses on teaching students how to use LaTeX for writing professional documents, especially for Calculus assignments and scientific articles. Overleaf is used for hands-on demonstrations due to its ease of use and online collaboration features.
+This repository contains the slides, materials, and examples for the **LaTeX Workshop** presented by Dalia Kamalzadeh & Koorosh Komeili Zadeh. The workshop focuses on teaching students how to use LaTeX for writing professional documents, especially for Calculus assignments and scientific articles. Overleaf is used for hands-on demonstrations due to its ease of use and online collaboration features.
 
 ## Getting Started with LaTeX
 During the workshop, we used [Overleaf](https://www.overleaf.com) as our LaTeX editor. Here's a quick guide to get started:
