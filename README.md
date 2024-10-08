@@ -10,12 +10,21 @@ During the workshop, we used [Overleaf](https://www.overleaf.com) as our LaTeX e
 4. Use the materials provided in this repository to practice.
 
 ## Repository Contents
-- `slides/`: PowerPoint slides used during the presentation.
-- `examples/`: Example `.tex` files covering LaTeX basics like document structure, math equations, figures, and tables.
-
+- `Basics-and-Writing-Math/`: Contains `.tex` files for basic document structure, math writing, and package usage.
+  - `document_structure.tex`: Example of setting up a basic LaTeX document.
+  - `math.tex`: Demonstrates writing inlined and displayed math equations.
+  - `packages.tex`: Illustrates the use of different LaTeX packages.
+  - `Sample-1.tex`: A sample document for Basics and Writing Math.
+- `Figures-Table-and-Citations/`: Includes `.tex` files for figures, tables, and references.
+  - `figures.tex`: Example of including images in LaTeX documents.
+  - `tables.tex`: Example of creating tables in LaTeX.
+  - `references.bib`: A sample BibTeX file for citations.
+- `PDF/`: Contains compiled `.pdf` files from the `.tex` examples.
+- `Slides/`: Contains the slides used for the workshop presentation.
+  
 ## How to Sync this Repository with Overleaf
-1. Ensure you have linked your university email with your Overleaf account by clicking on `Login in with SSO`.
-2. In Overleaf, go to **Account Setting** and connect your GitHub account.
+1. Ensure you have linked your university email with your Overleaf account by clicking on `Login with SSO`.
+2. In Overleaf, go to **Account Settings** and connect your GitHub account.
 3. Once connected, you can open this repository in Overleaf directly, or use the sync option to pull changes from GitHub.
 
 ## Topics Covered in the Workshop
